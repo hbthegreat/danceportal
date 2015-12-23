@@ -1,0 +1,30 @@
+<div ng-app="FestivalModule" ng-controller="FestivalController" ng-cloak>
+  <h2>Featured Festivals</h2>
+  <div class="col-md-4 festival-block" ng-repeat="festival in featuredFestivals">
+    <div class="festival-wrapper">
+      <a href="/festivals/{{festival.uniqueUrl}}">
+      <div class="video-wrapper">
+        <img ng-src="{{festival.thumbnailImageUrl}}" alt="festival-playing"/>
+      </div>
+      <div class="festival-description">
+        <div class="festival-viewers">There are currently <b>{{ festival.viewers }}</b> viewers watching</div>
+        <div class="festival-title">{{ festival.name }}</div>
+      </div>
+      </a>
+    </div>
+  </div>
+  <h2>All Festivals</h2>
+  <div class="col-md-4 festival-block" ng-repeat="festival in festivals">
+    <div class="festival-wrapper">
+      <a href="/festivals/{{festival.uniqueUrl}}">
+      <div class="video-wrapper">
+        <img ng-src="{{festival.thumbnailImageUrl}}" alt="festival-playing"/>
+      </div>
+      <div class="festival-description">
+        <div class="festival-viewers">There are currently <b>{{ festival.viewers }}</b> viewers watching</div>
+        <div class="festival-title">{{ festival.name }}</div>
+      </div>
+    </a>
+    </div>
+  </div>
+</div>

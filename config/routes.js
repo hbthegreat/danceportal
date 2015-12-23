@@ -34,8 +34,10 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
-
+  },
+  'GET /festivals' : 'FestivalController.showMainFestivalPage',
+  'GET /getFestivals' : 'FestivalController.getFestivals',
+  'GET /getFeaturedFestivals' : 'FestivalController.getFeaturedFestivals'
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!--STYLES-->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="/styles/importer.css">
     <!--STYLES END-->
   </head>
@@ -19,15 +20,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">LogoHere</a>
+          <a class="navbar-brand logo-wrapper" href="#"><img src="/images/dance-portal-long.png" /></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li><a href="#">Festivals<span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Clubs</a></li>
-            <li><a href="#">Store</a></li>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/festivals">Festivals<span class="sr-only">(current)</span></a></li>
+            <li><a href="/clubs">Clubs</a></li>
+            <li><a href="/store">Store</a></li>
           <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
@@ -40,6 +41,36 @@
     <div class="container">
     <%- body %>
     </div>
+    <footer class="footer">
+      <div class="container text-center footer-content">
+        <div class="col-sm-5">
+          <div class="footer-link">
+            <a href="/about">About Danceportal</a>
+          </div>
+          <div class="footer-link">
+            <a href="/terms-of-use">Terms of Use</a>
+          </div>
+          <div class="footer-link">
+            <a href="/privacy-policy">Privacy Policy</a>
+          </div>
+          <div class="footer-link">
+            <a href="/feedback">Feedback</a>
+          </div>
+        </div>
+        <div class="col-sm-7">
+          <h3>Connect With Us:</h3>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/DancePortal1/"><i class="fa fa-google-plus-square"></i></a>
+            <a href="https://www.facebook.com/DancePortal1/"><i class="fa fa-facebook-square"></i></a>
+            <a href="https://www.facebook.com/DancePortal1/"><i class="fa fa-twitter-square"></i></a>
+            <a href="https://www.facebook.com/DancePortal1/"><i class="fa fa-youtube-square"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h4 class="text-center text-muted">&copy; Dance Portal 2015</h4>
+      </div>
+    </footer>
     <!--
         Client-side Templates
         ========================
@@ -66,10 +97,14 @@
     <!--TEMPLATES END-->
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
-    <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="/js/dependencies/angular-toastr.js"></script>
+    <script src="/js/dependencies/compareTo.module.js"></script>
+    <script src="/js/public/festivals/FestivalModule.js"></script>
+    <script src="/js/public/festivals/FestivalController.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>
